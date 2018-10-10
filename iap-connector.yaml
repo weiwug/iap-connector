@@ -26,20 +26,19 @@ resources:
      - name: gae-test
        mapping:
         - name: host
-          source: iap-gae-test-dm.1bot2.info
-          destination: test-03-201616.appspot.com
+          source: test.newdomain.com
+          destination: test.appspot.com
         - name: subdomain1
-          source: subdomain.iap-gae-test.1bot2.info
-          destination: subdomain.test-03-201616.appspot.com
-     - name: netflix
+          source: service1.test.newdomain.com
+          destination: service1.test.appspot.com
+     - name: google
        mapping:
         - name: host
-          source: iap-netflix.1bot2.info
-          destination: www.netflix.com
+          source: google.newdomain.com
+          destination: www.google.com
     # Create certificate for k8s cluster with the following command:
     #    gcloud compute ssl-certificates create lb-cert1
     #           --private-key=/tmp/tls.key --certificate=/tmp/tls.crt
     tls:
      - lb-cert1
      - lb-cert2
-
